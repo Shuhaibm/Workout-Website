@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Bare - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Shuhaib's Workout Plan</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="homepage.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutpage.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Workoutpage.html">Workout Plan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contactpage.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Calculating your Strength Program </h1>
+        <h1 class="mt-3"></h1>
+        <p class="lead"> Please answer the following questions to the best of your ability.</p>
+
+        <!-- event.preventDefault(); makes it so page doesn't reload everytime -->
+
+        <form name="myForm" onsubmit="event.preventDefault(); myFunction()">
+
+          <div class = "form-group">
+              Name: <input type="text" name="name" >
+              Age: <input type="text" name="age">
+              Gender:
+                      <select name="gender">
+                        <option>Male<option>
+                        <option>Female<option>
+                        <option>Other<option>
+                      <select>
+          </div>
+          <div class = "form-group">
+              Please indicate you personal best set for deadlift
+                      <input name="dlift" type="number" min="1" max="1000"> (lbs) for <select name="dreps">
+                        <option>1
+                        <option>2
+                        <option>3
+                        <option>4
+                        <option>5
+                        <option>6
+                        <option>7
+                        <option>8
+                        <option>9
+                        <option>10
+                        <option>11
+                        <option>12
+                        <select> reps
+          </div>
+          <div class = "form-group">
+              Please indicate you personal best set for benchpress
+              <input name="bpress"type="number" min="1" max="1000"> (lbs) for <select name="breps">
+                          <option>1
+                          <option>2
+                          <option>3
+                          <option>4
+                          <option>5
+                          <option>6
+                          <option>7
+                          <option>8
+                          <option>9
+                          <option>10
+                          <option>11
+                          <option>12
+                        <select> reps
+          </div>
+          <div class = "form-group">
+            Please indicate you personal best set for squat
+              <input name="squat" type="number" min="1" max="1000"> (lbs) for <select name= "sreps">
+                            <option>1
+                            <option>2
+                            <option>3
+                            <option>4
+                            <option>5
+                            <option>6
+                            <option>7
+                            <option>8
+                            <option>9
+                            <option>10
+                            <option>11
+                            <option>12
+                          <select> reps
+          </div>
+              <input type="submit">
+        </form>
+
+
+
+        <p>. </p>
+        <p> .</p>
+        <p> .</p>
+        <h1 class="mt-1" id="Title"> </h1>
+        <h1 class="mt-3"></h1>
+        <p class="lead" id="Maxs"></p>
+
+  <!-- This Adds the lines in the graph -->
+
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+
+        <body>
+        <table style="width:100%">
+        <p class="lead"> Muscular Conditioning (Moderate Difficulty) </p>
+        <p class="lead"> Week 1 | Day 1 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=1.1.0>Set 1</th>
+          <td id=1.1.1>Set 2</th>
+          <td id=1.1.2>Set 3</th>
+          <td id=1.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Deadlift</th>
+          <td>Warmup</th>
+          <td id=1.2.0>Set 1</th>
+          <td id=1.2.1>Set 2</th>
+          <td id=1.2.2>Set 3</th>
+          <td id=1.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=1.3.0>Set 1</th>
+          <td id=1.3.1>Set 2</th>
+          <td id=1.3.2>Set 3</th>
+          <td id=1.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=1.4.0>Set 1</th>
+          <td id=1.4.1>Set 2</th>
+          <td id=1.4.2>Set 3</th>
+          <td id=1.4.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 1 | Day 2 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=2.1.0>Set 1</th>
+          <td id=2.1.1>Set 2</th>
+          <td id=2.1.2>Set 3</th>
+          <td id=2.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=2.2.0>Set 1</th>
+          <td id=2.2.1>Set 2</th>
+          <td id=2.2.2>Set 3</th>
+          <td id=2.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=2.3.0>Set 1</th>
+          <td id=2.3.1>Set 2</th>
+          <td id=2.3.2>Set 3</th>
+          <td id=2.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=2.4.0>Set 1</th>
+          <td id=2.4.1>Set 2</th>
+          <td id=2.4.2>Set 3</th>
+          <td id=2.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=2.5.0>Set 1</th>
+          <td id=2.5.1>Set 2</th>
+          <td id=2.5.2>Set 3</th>
+          <td id=2.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=2.6.0>Set 1</th>
+          <td id=2.6.1>Set 2</th>
+          <td id=2.6.2>Set 3</th>
+          <td id=2.6.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 1 | Day 3 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=3.1.0>Set 1</th>
+          <td id=3.1.1>Set 2</th>
+          <td id=3.1.2>Set 3</th>
+          <td id=3.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=3.2.0>Set 1</th>
+          <td id=3.2.1>Set 2</th>
+          <td id=3.2.2>Set 3</th>
+          <td id=3.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=3.3.0>Set 1</th>
+          <td id=3.3.1>Set 2</th>
+          <td id=3.3.2>Set 3</th>
+          <td id=3.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=3.4.0>Set 1</th>
+          <td id=3.4.1>Set 2</th>
+          <td id=3.4.2>Set 3</th>
+          <td id=3.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=3.5.0>Set 1</th>
+          <td id=3.5.1>Set 2</th>
+          <td id=3.5.2>Set 3</th>
+          <td id=3.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=3.6.0>Set 1</th>
+          <td id=3.6.1>Set 2</th>
+          <td id=3.6.2>Set 3</th>
+          <td id=3.6.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p class="lead"> Week 1 | Day 4 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=4.1.0>Set 1</th>
+          <td id=4.1.1>Set 2</th>
+          <td id=4.1.2>Set 3</th>
+          <td id=4.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Deadlift</th>
+          <td>Warmup</th>
+          <td id=4.2.0>Set 1</th>
+          <td id=4.2.1>Set 2</th>
+          <td id=4.2.2>Set 3</th>
+          <td id=4.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=4.3.0>Set 1</th>
+          <td id=4.3.1>Set 2</th>
+          <td id=4.3.2>Set 3</th>
+          <td id=4.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=4.4.0>Set 1</th>
+          <td id=4.4.1>Set 2</th>
+          <td id=4.4.2>Set 3</th>
+          <td id=4.4.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 1 | Day 5 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=5.1.0>Set 1</th>
+          <td id=5.1.1>Set 2</th>
+          <td id=5.1.2>Set 3</th>
+          <td id=5.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=5.2.0>Set 1</th>
+          <td id=5.2.1>Set 2</th>
+          <td id=5.2.2>Set 3</th>
+          <td id=5.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=5.3.0>Set 1</th>
+          <td id=5.3.1>Set 2</th>
+          <td id=5.3.2>Set 3</th>
+          <td id=5.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=5.4.0>Set 1</th>
+          <td id=5.4.1>Set 2</th>
+          <td id=5.4.2>Set 3</th>
+          <td id=5.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=5.5.0>Set 1</th>
+          <td id=5.5.1>Set 2</th>
+          <td id=5.5.2>Set 3</th>
+          <td id=5.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=5.6.0>Set 1</th>
+          <td id=5.6.1>Set 2</th>
+          <td id=5.6.2>Set 3</th>
+          <td id=5.6.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+
+        <!-- WEEK 2 -->
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p class="lead"> Muscular Conditioning/Hypertrophy (Higher Difficulty) </p>
+        <p class="lead"> Week 2 | Day 1 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=21.1.0>Set 1</th>
+          <td id=21.1.1>Set 2</th>
+          <td id=21.1.2>Set 3</th>
+          <td id=21.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Extra Volume Squats </td>
+        </tr>
+        <tr>
+          <td>Deadlift Variation</th>
+          <td>Warmup</th>
+          <td id=21.2.0>Set 1</th>
+          <td id=21.2.1>Set 2</th>
+          <td id=21.2.2>Set 3</th>
+          <td id=21.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=21.3.0>Set 1</th>
+          <td id=21.3.1>Set 2</th>
+          <td id=21.3.2>Set 3</th>
+          <td id=21.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=21.4.0>Set 1</th>
+          <td id=21.4.1>Set 2</th>
+          <td id=21.4.2>Set 3</th>
+          <td id=21.4.3>Set 4</th>
+        </tr>
+        </table>
+        <p>MR10 - Complete as many reps as possible, but no more than 10</p>
+        <p>Extra Volume Squats- Add 5 lbs, then perform 5 sets x 3 reps each set with 60 seconds rest between each sets</p>
+        <p>If you were not able to complete a minimum of 8 reps on the MR10 set, reduce max entered by 2.5% moving forward</p>
+        <p>Complete the 5 sets of 3 reps regardless even if you did perform less than 8 reps on the MR10 set</p>
+        </body>
+
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 2 | Day 2 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=22.1.0>Set 1</th>
+          <td id=22.1.1>Set 2</th>
+          <td id=22.1.2>Set 3</th>
+          <td id=22.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=22.2.0>Set 1</th>
+          <td id=22.2.1>Set 2</th>
+          <td id=22.2.2>Set 3</th>
+          <td id=22.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=22.3.0>Set 1</th>
+          <td id=22.3.1>Set 2</th>
+          <td id=22.3.2>Set 3</th>
+          <td id=22.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=22.4.0>Set 1</th>
+          <td id=22.4.1>Set 2</th>
+          <td id=22.4.2>Set 3</th>
+          <td id=22.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=22.5.0>Set 1</th>
+          <td id=22.5.1>Set 2</th>
+          <td id=22.5.2>Set 3</th>
+          <td id=22.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=22.6.0>Set 1</th>
+          <td id=22.6.1>Set 2</th>
+          <td id=22.6.2>Set 3</th>
+          <td id=22.6.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 2 | Day 3 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=23.1.0>Set 1</th>
+          <td id=23.1.1>Set 2</th>
+          <td id=23.1.2>Set 3</th>
+          <td id=23.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Back Off Squats </td>
+        </tr>
+        <tr>
+          <td>Deadlift Variation</th>
+          <td>Warmup</th>
+          <td id=23.2.0>Set 1</th>
+          <td id=23.2.1>Set 2</th>
+          <td id=23.2.2>Set 3</th>
+          <td id=23.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=23.3.0>Set 1</th>
+          <td id=23.3.1>Set 2</th>
+          <td id=23.3.2>Set 3</th>
+          <td id=23.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=23.4.0>Set 1</th>
+          <td id=23.4.1>Set 2</th>
+          <td id=23.4.2>Set 3</th>
+          <td id=23.4.3>Set 4</th>
+        </tr>
+        </table>
+        <p>MR10 - Complete as many reps as possible, but no more than 10</p>
+        <p>Back Off Squats - Reduce weight by 10 lbs, then proceed with the following: </p>
+        <p>If you completed 10 reps, perform 10 sets of 3 reps with 60 seconds rest between sets</p>
+        <p>If you completed 8-9 reps, perform 8 sets of 3 reps  with 60 seconds rest between sets</p>
+        <p>If you completed 7 reps, perform 5 sets of 3 reps  with 60 seconds rest between sets</p>
+        <p>If you completed less than 7 reps, skip back off sets entirely and reduce your 1 rep max by at least 2.5% for the following week</p>
+        </body>
+
+
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 2 | Day 4 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=24.1.0>Set 1</th>
+          <td id=24.1.1>Set 2</th>
+          <td id=24.1.2>Set 3</th>
+          <td id=24.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=24.2.0>Set 1</th>
+          <td id=24.2.1>Set 2</th>
+          <td id=24.2.2>Set 3</th>
+          <td id=24.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=24.3.0>Set 1</th>
+          <td id=24.3.1>Set 2</th>
+          <td id=24.3.2>Set 3</th>
+          <td id=24.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=24.4.0>Set 1</th>
+          <td id=24.4.1>Set 2</th>
+          <td id=24.4.2>Set 3</th>
+          <td id=24.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=24.5.0>Set 1</th>
+          <td id=24.5.1>Set 2</th>
+          <td id=24.5.2>Set 3</th>
+          <td id=24.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=24.6.0>Set 1</th>
+          <td id=24.6.1>Set 2</th>
+          <td id=24.6.2>Set 3</th>
+          <td id=24.6.3>Set 4</th>
+        </tr>
+        </table>
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 2 | Day 5 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=25.1.0>Set 1</th>
+          <td id=25.1.1>Set 2</th>
+          <td id=25.1.2>Set 3</th>
+          <td id=25.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=25.2.0>Set 1</th>
+          <td id=25.2.1>Set 2</th>
+          <td id=25.2.2>Set 3</th>
+          <td id=25.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=25.3.0>Set 1</th>
+          <td id=25.3.1>Set 2</th>
+          <td id=25.3.2>Set 3</th>
+          <td id=25.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=25.4.0>Set 1</th>
+          <td id=25.4.1>Set 2</th>
+          <td id=25.4.2>Set 3</th>
+          <td id=25.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=25.5.0>Set 1</th>
+          <td id=25.5.1>Set 2</th>
+          <td id=25.5.2>Set 3</th>
+          <td id=25.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=25.6.0>Set 1</th>
+          <td id=25.6.1>Set 2</th>
+          <td id=25.6.2>Set 3</th>
+          <td id=25.6.3>Set 4</th>
+        </tr>
+        </table>
+        <p>MR10 - Complete as many reps as possible, but no more than 10</p>
+
+
+
+
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p class="lead"> Linear Max OT Phase </p>
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p class="lead"> Week 3 | Day 1 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=31.1.0>Set 1</th>
+          <td id=31.1.1>Set 2</th>
+          <td id=31.1.2>Set 3</th>
+          <td id=31.1.3>Set 4</th>
+        </tr>
+          <td>Deadlift</th>
+          <td>Warmup</th>
+          <td id=31.2.0>Set 1</th>
+          <td id=31.2.1>Set 2</th>
+          <td id=31.2.2>Set 3</th>
+          <td id=31.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>No Accessory Lifts</th>
+          <td></th>
+          <td id=31.3.0>Set 1</th>
+          <td id=31.3.1>Set 2</th>
+          <td id=31.3.2>Set 3</th>
+          <td id=31.3.3>Set 4</th>
+        </tr>
+        </table>
+
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 3 | Day 2 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=32.1.0>Set 1</th>
+          <td id=32.1.1>Set 2</th>
+          <td id=32.1.2>Set 3</th>
+          <td id=32.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=32.2.0>Set 1</th>
+          <td id=32.2.1>Set 2</th>
+          <td id=32.2.2>Set 3</th>
+          <td id=32.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=32.3.0>Set 1</th>
+          <td id=32.3.1>Set 2</th>
+          <td id=32.3.2>Set 3</th>
+          <td id=32.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=32.4.0>Set 1</th>
+          <td id=32.4.1>Set 2</th>
+          <td id=32.4.2>Set 3</th>
+          <td id=32.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>No Optional Exercises</th>
+          <td></th>
+          <td id=32.5.0>Set 1</th>
+          <td id=32.5.1>Set 2</th>
+          <td id=32.5.2>Set 3</th>
+          <td id=32.5.3>Set 4</th>
+        </tr>
+        </table>
+
+
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p class="lead"> Week 3 | Day 3 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=33.1.0>Set 1</th>
+          <td id=33.1.1>Set 2</th>
+          <td id=33.1.2>Set 3</th>
+          <td id=33.1.3>Set 4</th>
+        </tr>
+          <td>Deadlift Variation</th>
+          <td>Warmup</th>
+          <td id=33.2.0>Set 1</th>
+          <td id=33.2.1>Set 2</th>
+          <td id=33.2.2>Set 3</th>
+          <td id=33.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>No Accessory Lifts</th>
+          <td></th>
+          <td id=33.3.0>Set 1</th>
+          <td id=33.3.1>Set 2</th>
+          <td id=33.3.2>Set 3</th>
+          <td id=33.3.3>Set 4</th>
+        </tr>
+        </table>
+
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 3 | Day 4 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=34.1.0>Set 1</th>
+          <td id=34.1.1>Set 2</th>
+          <td id=34.1.2>Set 3</th>
+          <td id=34.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=34.2.0>Set 1</th>
+          <td id=34.2.1>Set 2</th>
+          <td id=34.2.2>Set 3</th>
+          <td id=34.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=34.3.0>Set 1</th>
+          <td id=34.3.1>Set 2</th>
+          <td id=34.3.2>Set 3</th>
+          <td id=34.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=34.4.0>Set 1</th>
+          <td id=34.4.1>Set 2</th>
+          <td id=34.4.2>Set 3</th>
+          <td id=34.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>No Optional Exercises</th>
+          <td></th>
+          <td id=34.5.0>Set 1</th>
+          <td id=34.5.1>Set 2</th>
+          <td id=34.5.2>Set 3</th>
+          <td id=34.5.3>Set 4</th>
+        </tr>
+        </table>
+
+
+
+
+
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p class="lead"> Heavy Weight Acclimation </p>
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 4 | Day 1 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=41.1.0>Set 1</th>
+          <td id=41.1.1>Set 2</th>
+          <td id=41.1.2>Set 3</th>
+          <td id=41.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Deadlift Variation</th>
+          <td>Warmup</th>
+          <td id=41.2.0>Set 1</th>
+          <td id=41.2.1>Set 2</th>
+          <td id=41.2.2>Set 3</th>
+          <td id=41.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=41.3.0>Set 1</th>
+          <td id=41.3.1>Set 2</th>
+          <td id=41.3.2>Set 3</th>
+          <td id=41.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=41.4.0>Set 1</th>
+          <td id=41.4.1>Set 2</th>
+          <td id=41.4.2>Set 3</th>
+          <td id=41.4.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 4 | Day 2 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=42.1.0>Set 1</th>
+          <td id=42.1.1>Set 2</th>
+          <td id=42.1.2>Set 3</th>
+          <td id=42.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=42.2.0>Set 1</th>
+          <td id=42.2.1>Set 2</th>
+          <td id=42.2.2>Set 3</th>
+          <td id=42.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=42.3.0>Set 1</th>
+          <td id=42.3.1>Set 2</th>
+          <td id=42.3.2>Set 3</th>
+          <td id=42.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=42.4.0>Set 1</th>
+          <td id=42.4.1>Set 2</th>
+          <td id=42.4.2>Set 3</th>
+          <td id=42.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td></th>
+          <td id=42.5.0>Set 1</th>
+          <td id=42.5.1>Set 2</th>
+          <td id=42.5.2>Set 3</th>
+          <td id=42.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td></th>
+          <td id=42.6.0>Set 1</th>
+          <td id=42.6.1>Set 2</th>
+          <td id=42.6.2>Set 3</th>
+          <td id=42.6.3>Set 4</th>
+        </tr>
+        </table>
+
+
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 4 | Day 3 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=43.1.0>Set 1</th>
+          <td id=43.1.1>Set 2</th>
+          <td id=43.1.2>Set 3</th>
+          <td id=43.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Deadlift </th>
+          <td>Warmup</th>
+          <td id=43.2.0>Set 1</th>
+          <td id=43.2.1>Set 2</th>
+          <td id=43.2.2>Set 3</th>
+          <td id=43.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td>Warmup</th>
+          <td id=43.3.0>Set 1</th>
+          <td id=43.3.1>Set 2</th>
+          <td id=43.3.2>Set 3</th>
+          <td id=43.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 2</th>
+          <td>Warmup</th>
+          <td id=43.4.0>Set 1</th>
+          <td id=43.4.1>Set 2</th>
+          <td id=43.4.2>Set 3</th>
+          <td id=43.4.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 4 | Day 4 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=44.1.0>Set 1</th>
+          <td id=44.1.1>Set 2</th>
+          <td id=44.1.2>Set 3</th>
+          <td id=44.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=44.2.0>Set 1</th>
+          <td id=44.2.1>Set 2</th>
+          <td id=44.2.2>Set 3</th>
+          <td id=44.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=44.3.0>Set 1</th>
+          <td id=44.3.1>Set 2</th>
+          <td id=44.3.2>Set 3</th>
+          <td id=44.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=44.4.0>Set 1</th>
+          <td id=44.4.1>Set 2</th>
+          <td id=44.4.2>Set 3</th>
+          <td id=44.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td></th>
+          <td id=44.5.0>Set 1</th>
+          <td id=44.5.1>Set 2</th>
+          <td id=44.5.2>Set 3</th>
+          <td id=44.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td></th>
+          <td id=44.6.0>Set 1</th>
+          <td id=44.6.1>Set 2</th>
+          <td id=44.6.2>Set 3</th>
+          <td id=44.6.3>Set 4</th>
+        </tr>
+        </table>
+
+
+
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p class="lead"> High Intensity Strength </p>
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 5 | Day 1 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Squat</th>
+          <td>Warmup</th>
+          <td id=51.1.0>Set 1</th>
+          <td id=51.1.1>Set 2</th>
+          <td id=51.1.2>Set 3</th>
+          <td id=51.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Deadlift</th>
+          <td>Warmup</th>
+          <td id=51.2.0>Set 1</th>
+          <td id=51.2.1>Set 2</th>
+          <td id=51.2.2>Set 3</th>
+          <td id=51.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Lower Body 1</th>
+          <td>Warmup</th>
+          <td id=51.3.0>Set 1</th>
+          <td id=51.3.1>Set 2</th>
+          <td id=51.3.2>Set 3</th>
+          <td id=51.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Lower Body 2</th>
+          <td>Warmup</th>
+          <td id=51.4.0>Set 1</th>
+          <td id=51.4.1>Set 2</th>
+          <td id=51.4.2>Set 3</th>
+          <td id=51.4.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 5 | Day 2 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Benchpress</th>
+          <td>Warmup</th>
+          <td id=52.1.0>Set 1</th>
+          <td id=52.1.1>Set 2</th>
+          <td id=52.1.2>Set 3</th>
+          <td id=52.1.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbell Row</th>
+          <td>Warmup</th>
+          <td id=52.2.0>Set 1</th>
+          <td id=52.2.1>Set 2</th>
+          <td id=52.2.2>Set 3</th>
+          <td id=52.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Dumbbell OHP</th>
+          <td>Warmup</th>
+          <td id=52.3.0>Set 1</th>
+          <td id=52.3.1>Set 2</th>
+          <td id=52.3.2>Set 3</th>
+          <td id=52.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Weighted Pull-up</th>
+          <td>Warmup</th>
+          <td id=52.4.0>Set 1</th>
+          <td id=52.4.1>Set 2</th>
+          <td id=52.4.2>Set 3</th>
+          <td id=52.4.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Exercise 1</th>
+          <td></th>
+          <td id=52.5.0>Set 1</th>
+          <td id=52.5.1>Set 2</th>
+          <td id=52.5.2>Set 3</th>
+          <td id=52.5.3>Set 4</th>
+        </tr><tr>
+          <td>Optional Exercise 2</th>
+          <td></th>
+          <td id=52.6.0>Set 1</th>
+          <td id=52.6.1>Set 2</th>
+          <td id=52.6.2>Set 3</th>
+          <td id=52.6.3>Set 4</th>
+        </tr>
+        </table>
+
+
+        <head>
+        <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;}
+        </style>
+        </head>
+        <body>
+        <table style="width:100%">
+        <p></p>
+        <p class="lead"> Week 5 | Day 3 </p>
+        <tr>
+          <th>Exercise</th>
+          <th>Warmup</th>
+          <th>Set 1</th>
+          <th>Set 2</th>
+          <th>Set 3</th>
+          <th>Set 4</th>
+        </tr>
+        <tr>
+          <td>Deadlift</th>
+          <td>Warmup</th>
+          <td id=53.2.0>Set 1</th>
+          <td id=53.2.1>Set 2</th>
+          <td id=53.2.2>Set 3</th>
+          <td id=53.2.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Lower Body 1</th>
+          <td>Warmup</th>
+          <td id=53.3.0>Set 1</th>
+          <td id=53.3.1>Set 2</th>
+          <td id=53.3.2>Set 3</th>
+          <td id=53.3.3>Set 4</th>
+        </tr>
+        <tr>
+          <td>Optional Lower Body 2</th>
+          <td>Warmup</th>
+          <td id=53.4.0>Set 1</th>
+          <td id=53.4.1>Set 2</th>
+          <td id=53.4.2>Set 3</th>
+          <td id=53.4.3>Set 4</th>
+        </tr>
+        </table>
+        </body>
+
+
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p class="lead"> For Week 6 You Have 3 Options </p>
+        <p>1. Use calculated 1RM from last week's 1-4 rep set and start the next cycle.</p>
+        <p>2. Use projected max for next cycle, but take a deload week by repeating week 1 but skip the last upper body workout.</p>
+        <p>3. Take this 6th week to find your 1RM. Then either deload or start new cycle.</p>
+
+
+
+
+        <script>
+
+
+
+
+
+        function myFunction()
+        {
+          name=myForm.elements["name"].value
+          age=myForm.elements["age"].value
+          gender=myForm.elements["gender"].value
+          dweight=myForm.elements["dlift"].value
+          dreps=myForm.elements["dreps"].value
+          bweight=myForm.elements["bpress"].value
+          breps=myForm.elements["breps"].value
+          sweight=myForm.elements["squat"].value
+          sreps=myForm.elements["sreps"].value
+
+          <!-- Source for calculations: Bodybuilding.com - authors include many of the top coaches, nutritionists, and physique athletes in the world today 1RM calculations are done using the Bryzycki formula -->
+          squatmax=Math.round(10*(parseInt(sweight)*(36/(37-parseInt(sreps)))))/10
+          deadmax= Math.round(10*(parseInt(dweight)*(36/(37-parseInt(dreps)))))/10
+          benchmax=Math.round(10*(parseInt(bweight)*(36/(37-parseInt(breps)))))/10
+          document.getElementById("Title").innerHTML = name+"'s Six Week Workout Plan";
+          document.getElementById("Maxs").innerHTML = "1RM Deadlift:" + deadmax + "lbs  | " + " 1RM Benchpress:" + benchmax + "lbs  | " + " 1RM Squat:" + squatmax + "lbs  | " ;
+
+          <!-- Making Graphs -->
+          <!-- WEEK 1 -->
+          <!-- Day 1 -->
+          document.getElementById("1.1.0").innerHTML =Math.round(10*(0.8*squatmax))/10+ "lbs  x 6 reps";
+          document.getElementById("1.1.1").innerHTML =Math.round(10*(0.8*squatmax))/10+ "lbs  x 6 reps";
+          document.getElementById("1.1.2").innerHTML =Math.round(10*(0.8*squatmax))/10+ "lbs  x 6 reps";
+          document.getElementById("1.1.3").innerHTML =Math.round(10*(0.8*squatmax))/10+ "lbs  x 6 reps";
+          document.getElementById("1.2.0").innerHTML =Math.round(10*(0.8*deadmax))/10+ "lbs  x 6 reps";
+          document.getElementById("1.2.1").innerHTML =Math.round(10*(0.8*deadmax))/10+ "lbs  x 6 reps";
+          document.getElementById("1.2.2").innerHTML ="";
+          document.getElementById("1.2.3").innerHTML ="";
+          document.getElementById("1.3.0").innerHTML ="8 reps";
+          document.getElementById("1.3.1").innerHTML ="8 reps";
+          document.getElementById("1.3.2").innerHTML ="8 reps";
+          document.getElementById("1.3.3").innerHTML ="";
+          document.getElementById("1.4.0").innerHTML ="8 reps";
+          document.getElementById("1.4.1").innerHTML ="8 reps";
+          document.getElementById("1.4.2").innerHTML ="8 reps";
+          document.getElementById("1.4.3").innerHTML ="";
+
+          <!-- Day 2 -->
+          document.getElementById("2.1.0").innerHTML =Math.round(10*(0.5*benchmax))/10+ "lbs  x 6 reps";
+          document.getElementById("2.1.1").innerHTML =Math.round(10*(0.7*benchmax))/10+ "lbs  x 6 reps";
+          document.getElementById("2.1.2").innerHTML =Math.round(10*(0.75*benchmax))/10+ "lbs  x 6 reps";
+          document.getElementById("2.1.3").innerHTML =Math.round(10*(0.8*benchmax))/10+ "lbs  x 6 reps";
+          document.getElementById("2.2.0").innerHTML ="10 reps";
+          document.getElementById("2.2.1").innerHTML ="10 reps";
+          document.getElementById("2.2.2").innerHTML ="8 reps";
+          document.getElementById("2.2.3").innerHTML ="6 reps";
+          document.getElementById("2.3.0").innerHTML ="12 reps";
+          document.getElementById("2.3.1").innerHTML ="12 reps";
+          document.getElementById("2.3.2").innerHTML ="10 reps";
+          document.getElementById("2.3.3").innerHTML ="8 reps";
+          document.getElementById("2.4.0").innerHTML ="12 reps";
+          document.getElementById("2.4.1").innerHTML ="12 reps";
+          document.getElementById("2.4.2").innerHTML ="10 reps";
+          document.getElementById("2.4.3").innerHTML ="8 reps";
+          document.getElementById("2.5.0").innerHTML ="8-12 reps";
+          document.getElementById("2.5.1").innerHTML ="8-12 reps";
+          document.getElementById("2.5.2").innerHTML ="8-12 reps";
+          document.getElementById("2.5.3").innerHTML ="";
+          document.getElementById("2.6.0").innerHTML ="8-12 reps";
+          document.getElementById("2.6.1").innerHTML ="8-12 reps";
+          document.getElementById("2.6.2").innerHTML ="8-12 reps";
+          document.getElementById("2.6.3").innerHTML ="";
+
+          <!-- Day 3 -->
+          document.getElementById("3.1.0").innerHTML =Math.round(10*(0.5*benchmax))/10+ "lbs  x 6 reps";
+          document.getElementById("3.1.1").innerHTML =Math.round(10*(0.7*benchmax))/10+ "lbs  x 6 reps";
+          document.getElementById("3.1.2").innerHTML =Math.round(10*(0.75*benchmax))/10+ "lbs  x 6 reps";
+          document.getElementById("3.1.3").innerHTML =Math.round(10*(0.8*benchmax))/10+ "lbs  x 6 reps";
+          document.getElementById("3.2.0").innerHTML ="10 reps";
+          document.getElementById("3.2.1").innerHTML ="10 reps";
+          document.getElementById("3.2.2").innerHTML ="8 reps";
+          document.getElementById("3.2.3").innerHTML ="6 reps";
+          document.getElementById("3.3.0").innerHTML ="12 reps";
+          document.getElementById("3.3.1").innerHTML ="12 reps";
+          document.getElementById("3.3.2").innerHTML ="10 reps";
+          document.getElementById("3.3.3").innerHTML ="8 reps";
+          document.getElementById("3.4.0").innerHTML ="12 reps";
+          document.getElementById("3.4.1").innerHTML ="12 reps";
+          document.getElementById("3.4.2").innerHTML ="10 reps";
+          document.getElementById("3.4.3").innerHTML ="8 reps";
+          document.getElementById("3.5.0").innerHTML ="8-12 reps";
+          document.getElementById("3.5.1").innerHTML ="8-12 reps";
+          document.getElementById("3.5.2").innerHTML ="8-12 reps";
+          document.getElementById("3.5.3").innerHTML ="";
+          document.getElementById("3.6.0").innerHTML ="8-12 reps";
+          document.getElementById("3.6.1").innerHTML ="8-12 reps";
+          document.getElementById("3.6.2").innerHTML ="8-12 reps";
+          document.getElementById("3.6.3").innerHTML ="";
+
+          <!-- Day 4 -->
+          document.getElementById("4.1.0").innerHTML =Math.round(10*(0.7*squatmax))/10+ "lbs  x 8 reps";
+          document.getElementById("4.1.1").innerHTML =Math.round(10*(0.7*squatmax))/10+ "lbs  x 8 reps";
+          document.getElementById("4.1.2").innerHTML =Math.round(10*(0.7*squatmax))/10+ "lbs  x 8 reps";
+          document.getElementById("4.1.3").innerHTML =Math.round(10*(0.7*squatmax))/10+ "lbs  x 8 reps";
+          document.getElementById("4.2.0").innerHTML =Math.round(10*(0.7*deadmax))/10+ "lbs  x 8 reps";
+          document.getElementById("4.2.1").innerHTML =Math.round(10*(0.7*deadmax))/10+ "lbs  x 8 reps";
+          document.getElementById("4.2.2").innerHTML ="";
+          document.getElementById("4.2.3").innerHTML ="";
+          document.getElementById("4.3.0").innerHTML ="8 reps";
+          document.getElementById("4.3.1").innerHTML ="8 reps";
+          document.getElementById("4.3.2").innerHTML ="8 reps";
+          document.getElementById("4.3.3").innerHTML ="";
+          document.getElementById("4.4.0").innerHTML ="8 reps";
+          document.getElementById("4.4.1").innerHTML ="8 reps";
+          document.getElementById("4.4.2").innerHTML ="8 reps";
+          document.getElementById("4.4.3").innerHTML ="";
+
+          <!-- Day 5 -->
+          document.getElementById("5.1.0").innerHTML =Math.round(10*(0.8*benchmax))/10+ "lbs Max Reps";
+          document.getElementById("5.1.1").innerHTML ="";
+          document.getElementById("5.1.2").innerHTML ="";
+          document.getElementById("5.1.3").innerHTML ="";
+          document.getElementById("5.2.0").innerHTML ="10 reps";
+          document.getElementById("5.2.1").innerHTML ="10 reps";
+          document.getElementById("5.2.2").innerHTML ="8 reps";
+          document.getElementById("5.2.3").innerHTML ="6 reps";
+          document.getElementById("5.3.0").innerHTML ="12 reps";
+          document.getElementById("5.3.1").innerHTML ="12 reps";
+          document.getElementById("5.3.2").innerHTML ="10 reps";
+          document.getElementById("5.3.3").innerHTML ="8 reps";
+          document.getElementById("5.4.0").innerHTML ="12 reps";
+          document.getElementById("5.4.1").innerHTML ="12 reps";
+          document.getElementById("5.4.2").innerHTML ="10 reps";
+          document.getElementById("5.4.3").innerHTML ="8 reps";
+          document.getElementById("5.5.0").innerHTML ="8-12 reps";
+          document.getElementById("5.5.1").innerHTML ="8-12 reps";
+          document.getElementById("5.5.2").innerHTML ="8-12 reps";
+          document.getElementById("5.5.3").innerHTML ="";
+          document.getElementById("5.6.0").innerHTML ="8-12 reps";
+          document.getElementById("5.6.1").innerHTML ="8-12 reps";
+          document.getElementById("5.6.2").innerHTML ="8-12 reps";
+          document.getElementById("5.6.3").innerHTML ="";
+
+
+          <!-- WEEK 2 -->
+          <!-- Day 1 -->
+          document.getElementById("21.1.0").innerHTML =Math.round(10*(0.8*squatmax))/10+ "lbs  x MR10";
+          document.getElementById("21.1.1").innerHTML ="";
+          document.getElementById("21.1.2").innerHTML ="";
+          document.getElementById("21.1.3").innerHTML ="";
+          document.getElementById("21.2.0").innerHTML =" 8 reps";
+          document.getElementById("21.2.1").innerHTML =" 8 reps";
+          document.getElementById("21.2.2").innerHTML =" 8 reps";
+          document.getElementById("21.2.3").innerHTML ="";
+          document.getElementById("21.3.0").innerHTML ="8 reps";
+          document.getElementById("21.3.1").innerHTML ="8 reps";
+          document.getElementById("21.3.2").innerHTML ="8 reps";
+          document.getElementById("21.3.3").innerHTML ="";
+          document.getElementById("21.4.0").innerHTML ="8 reps";
+          document.getElementById("21.4.1").innerHTML ="8 reps";
+          document.getElementById("21.4.2").innerHTML ="8 reps";
+          document.getElementById("21.4.3").innerHTML ="";
+
+
+
+          <!-- Day 2 -->
+          document.getElementById("22.1.0").innerHTML =Math.round(10*(0.7*benchmax))/10+ "lbs x 10 reps";
+          document.getElementById("22.1.1").innerHTML =Math.round(10*(0.78125*benchmax))/10+ "lbs x 8 reps";
+          document.getElementById("22.1.2").innerHTML =Math.round(10*(0.8125*benchmax))/10+ "lbs x 6-8 reps";
+          document.getElementById("22.1.3").innerHTML ="";
+          document.getElementById("22.2.0").innerHTML ="10 reps";
+          document.getElementById("22.2.1").innerHTML ="8 reps";
+          document.getElementById("22.2.2").innerHTML ="8 reps";
+          document.getElementById("22.2.3").innerHTML ="";
+          document.getElementById("22.3.0").innerHTML ="10 reps";
+          document.getElementById("22.3.1").innerHTML ="8 reps";
+          document.getElementById("22.3.2").innerHTML ="6 reps";
+          document.getElementById("22.3.3").innerHTML ="";
+          document.getElementById("22.4.0").innerHTML ="10 reps";
+          document.getElementById("22.4.1").innerHTML ="8 reps";
+          document.getElementById("22.4.2").innerHTML ="6 reps";
+          document.getElementById("22.4.3").innerHTML ="";
+          document.getElementById("22.5.0").innerHTML ="8-12 reps";
+          document.getElementById("22.5.1").innerHTML ="8-12 reps";
+          document.getElementById("22.5.2").innerHTML ="8-12 reps";
+          document.getElementById("22.5.3").innerHTML ="";
+          document.getElementById("22.6.0").innerHTML ="8-12 reps";
+          document.getElementById("22.6.1").innerHTML ="8-12 reps";
+          document.getElementById("22.6.2").innerHTML ="8-12 reps";
+          document.getElementById("22.6.3").innerHTML ="";
+
+          <!-- Day 3 -->
+          document.getElementById("23.1.0").innerHTML =Math.round(10*(0.81*squatmax))/10+ "lbs  x MR10";
+          document.getElementById("23.1.1").innerHTML ="";
+          document.getElementById("23.1.2").innerHTML ="";
+          document.getElementById("23.1.3").innerHTML ="";
+          document.getElementById("23.2.0").innerHTML =" 8 reps";
+          document.getElementById("23.2.1").innerHTML =" 8 reps";
+          document.getElementById("23.2.2").innerHTML =" 8 reps";
+          document.getElementById("23.2.3").innerHTML ="";
+          document.getElementById("23.3.0").innerHTML ="8 reps";
+          document.getElementById("23.3.1").innerHTML ="8 reps";
+          document.getElementById("23.3.2").innerHTML ="8 reps";
+          document.getElementById("23.3.3").innerHTML ="";
+          document.getElementById("23.4.0").innerHTML ="8 reps";
+          document.getElementById("23.4.1").innerHTML ="8 reps";
+          document.getElementById("23.4.2").innerHTML ="8 reps";
+          document.getElementById("23.4.3").innerHTML ="";
+
+          <!-- Day 4 -->
+          document.getElementById("24.1.0").innerHTML =Math.round(10*(0.71875*benchmax))/10+ "lbs x 10 reps";
+          document.getElementById("24.1.1").innerHTML =Math.round(10*(0.78125*benchmax))/10+ "lbs x 8 reps";
+          document.getElementById("24.1.2").innerHTML =Math.round(10*(0.8125*benchmax))/10+ "lbs x 6-8 reps";
+          document.getElementById("24.1.3").innerHTML ="";
+          document.getElementById("24.2.0").innerHTML ="10 reps";
+          document.getElementById("24.2.1").innerHTML ="8 reps";
+          document.getElementById("24.2.2").innerHTML ="8 reps";
+          document.getElementById("24.2.3").innerHTML ="";
+          document.getElementById("24.3.0").innerHTML ="10 reps";
+          document.getElementById("24.3.1").innerHTML ="8 reps";
+          document.getElementById("24.3.2").innerHTML ="6 reps";
+          document.getElementById("24.3.3").innerHTML ="";
+          document.getElementById("24.4.0").innerHTML ="10 reps";
+          document.getElementById("24.4.1").innerHTML ="8 reps";
+          document.getElementById("24.4.2").innerHTML ="6 reps";
+          document.getElementById("24.4.3").innerHTML ="";
+          document.getElementById("24.5.0").innerHTML ="8-12 reps";
+          document.getElementById("24.5.1").innerHTML ="8-12 reps";
+          document.getElementById("24.5.2").innerHTML ="8-12 reps";
+          document.getElementById("24.5.3").innerHTML ="";
+          document.getElementById("24.6.0").innerHTML ="8-12 reps";
+          document.getElementById("24.6.1").innerHTML ="8-12 reps";
+          document.getElementById("24.6.2").innerHTML ="8-12 reps";
+          document.getElementById("24.6.3").innerHTML ="";
+
+          <!-- Day 5 -->
+          document.getElementById("25.1.0").innerHTML =Math.round(10*(0.78125*benchmax))/10+ "lbs x MR10";
+          document.getElementById("25.1.1").innerHTML ="";
+          document.getElementById("25.1.2").innerHTML ="";
+          document.getElementById("25.1.3").innerHTML ="";
+          document.getElementById("25.2.0").innerHTML ="10 reps";
+          document.getElementById("25.2.1").innerHTML ="8 reps";
+          document.getElementById("25.2.2").innerHTML ="8 reps";
+          document.getElementById("25.2.3").innerHTML ="";
+          document.getElementById("25.3.0").innerHTML ="10 reps";
+          document.getElementById("25.3.1").innerHTML ="8 reps";
+          document.getElementById("25.3.2").innerHTML ="6 reps";
+          document.getElementById("25.3.3").innerHTML ="";
+          document.getElementById("25.4.0").innerHTML ="10 reps";
+          document.getElementById("25.4.1").innerHTML ="8 reps";
+          document.getElementById("25.4.2").innerHTML ="6 reps";
+          document.getElementById("25.4.3").innerHTML ="";
+          document.getElementById("25.5.0").innerHTML ="8-12 reps";
+          document.getElementById("25.5.1").innerHTML ="8-12 reps";
+          document.getElementById("25.5.2").innerHTML ="8-12 reps";
+          document.getElementById("25.5.3").innerHTML ="";
+          document.getElementById("25.6.0").innerHTML ="8-12 reps";
+          document.getElementById("25.6.1").innerHTML ="8-12 reps";
+          document.getElementById("25.6.2").innerHTML ="8-12 reps";
+          document.getElementById("25.6.3").innerHTML ="";
+
+
+          <!-- WEEK 3 -->
+          <!-- Day 1 -->
+          document.getElementById("31.1.0").innerHTML =Math.round(10*(0.864*squatmax))/10+ "lbs  x 4-6 reps";
+          document.getElementById("31.1.1").innerHTML =Math.round(10*(0.864*squatmax))/10+ "lbs  x 4-6 reps";
+          document.getElementById("31.1.2").innerHTML =Math.round(10*(0.864*squatmax))/10+ "lbs  x 4-6 reps";
+          document.getElementById("31.1.3").innerHTML ="";
+          document.getElementById("31.2.0").innerHTML =Math.round(10*(0.95*deadmax))/10+ "lbs  x 3-6 reps";
+          document.getElementById("31.2.1").innerHTML =Math.round(10*(0.95*deadmax))/10+ "lbs  x 3-6 reps";
+          document.getElementById("31.2.2").innerHTML ="";
+          document.getElementById("31.2.3").innerHTML ="";
+          document.getElementById("31.3.0").innerHTML ="";
+          document.getElementById("31.3.1").innerHTML ="";
+          document.getElementById("31.3.2").innerHTML ="";
+          document.getElementById("31.3.3").innerHTML ="";
+
+          <!-- Day 2 -->
+          document.getElementById("32.1.0").innerHTML =Math.round(10*(0.844*benchmax))/10+ "lbs x 4-6 reps";
+          document.getElementById("32.1.1").innerHTML =Math.round(10*(0.844*benchmax))/10+ "lbs x 4-6 reps";
+          document.getElementById("32.1.2").innerHTML =Math.round(10*(0.844*benchmax))/10+ "lbs x 4-6 reps";
+          document.getElementById("32.1.3").innerHTML ="";
+          document.getElementById("32.2.0").innerHTML ="6 reps";
+          document.getElementById("32.2.1").innerHTML ="6 reps";
+          document.getElementById("32.2.2").innerHTML ="6 reps";
+          document.getElementById("32.2.3").innerHTML ="";
+          document.getElementById("32.3.0").innerHTML ="6 reps";
+          document.getElementById("32.3.1").innerHTML ="6 reps";
+          document.getElementById("32.3.2").innerHTML ="6 reps";
+          document.getElementById("32.3.3").innerHTML ="";
+          document.getElementById("32.4.0").innerHTML ="6 reps";
+          document.getElementById("32.4.1").innerHTML ="6 reps";
+          document.getElementById("32.4.2").innerHTML ="6 reps";
+          document.getElementById("32.4.3").innerHTML ="";
+          document.getElementById("32.5.0").innerHTML ="";
+          document.getElementById("32.5.1").innerHTML ="";
+          document.getElementById("32.5.2").innerHTML ="";
+          document.getElementById("32.5.3").innerHTML ="";
+
+          <!-- Day 3 -->
+          document.getElementById("33.1.0").innerHTML =Math.round(10*(0.874*squatmax))/10+ "lbs  x 4-6 reps";
+          document.getElementById("33.1.1").innerHTML ="";
+          document.getElementById("33.1.2").innerHTML ="";
+          document.getElementById("33.1.3").innerHTML ="";
+          document.getElementById("33.2.0").innerHTML ="8 reps";
+          document.getElementById("33.2.1").innerHTML ="";
+          document.getElementById("33.2.2").innerHTML ="";
+          document.getElementById("33.2.3").innerHTML ="";
+          document.getElementById("33.3.0").innerHTML ="";
+          document.getElementById("33.3.1").innerHTML ="";
+          document.getElementById("33.3.2").innerHTML ="";
+          document.getElementById("33.3.3").innerHTML ="";
+
+          <!-- Day 4 -->
+          document.getElementById("34.1.0").innerHTML =Math.round(10*(0.86*benchmax))/10+ "lbs x 4-6 reps";
+          document.getElementById("34.1.1").innerHTML =Math.round(10*(0.86*benchmax))/10+ "lbs x 4-6 reps";
+          document.getElementById("34.1.2").innerHTML =Math.round(10*(0.86*benchmax))/10+ "lbs x 4-6 reps";
+          document.getElementById("34.1.3").innerHTML ="";
+          document.getElementById("34.2.0").innerHTML ="6 reps";
+          document.getElementById("34.2.1").innerHTML ="6 reps";
+          document.getElementById("34.2.2").innerHTML ="6 reps";
+          document.getElementById("34.2.3").innerHTML ="";
+          document.getElementById("34.3.0").innerHTML ="6 reps";
+          document.getElementById("34.3.1").innerHTML ="6 reps";
+          document.getElementById("34.3.2").innerHTML ="6 reps";
+          document.getElementById("34.3.3").innerHTML ="";
+          document.getElementById("34.4.0").innerHTML ="6 reps";
+          document.getElementById("34.4.1").innerHTML ="6 reps";
+          document.getElementById("34.4.2").innerHTML ="6 reps";
+          document.getElementById("34.4.3").innerHTML ="";
+          document.getElementById("34.5.0").innerHTML ="";
+          document.getElementById("34.5.1").innerHTML ="";
+          document.getElementById("34.5.2").innerHTML ="";
+          document.getElementById("34.5.3").innerHTML ="";
+
+          <!-- WEEK 4 -->
+          <!-- Day 1 -->
+          document.getElementById("41.1.0").innerHTML =Math.round(10*(0.891*squatmax))/10+ "lbs  x 4-6 reps";
+          document.getElementById("41.1.1").innerHTML =Math.round(10*(0.90*squatmax))/10+ "lbs  x 4-6 reps";
+          document.getElementById("41.1.2").innerHTML =Math.round(10*(0.91*squatmax))/10+ "lbs  x 4-6 reps";
+          document.getElementById("41.1.3").innerHTML ="";
+          document.getElementById("41.2.0").innerHTML ="6 reps";
+          document.getElementById("41.2.1").innerHTML ="6 reps";
+          document.getElementById("41.2.2").innerHTML ="";
+          document.getElementById("41.2.3").innerHTML ="";
+          document.getElementById("41.3.0").innerHTML ="8 reps";
+          document.getElementById("41.3.1").innerHTML ="8 reps";
+          document.getElementById("41.3.2").innerHTML ="8 reps";
+          document.getElementById("41.3.3").innerHTML ="";
+          document.getElementById("41.4.0").innerHTML ="8 reps";
+          document.getElementById("41.4.1").innerHTML ="8 reps";
+          document.getElementById("41.4.2").innerHTML ="8 reps";
+          document.getElementById("41.4.3").innerHTML ="";
+
+
+          <!-- Day 2 -->
+          document.getElementById("42.1.0").innerHTML =Math.round(10*(0.86*benchmax))/10+ "lbs x 3 reps";
+          document.getElementById("42.1.1").innerHTML =Math.round(10*(0.89*benchmax))/10+ "lbs x 3 reps";
+          document.getElementById("42.1.2").innerHTML =Math.round(10*(0.91*benchmax))/10+ "lbs x 3 reps";
+          document.getElementById("42.1.3").innerHTML ="";
+          document.getElementById("42.2.0").innerHTML ="10 reps";
+          document.getElementById("42.2.1").innerHTML ="10 reps";
+          document.getElementById("42.2.2").innerHTML ="8 reps";
+          document.getElementById("42.2.3").innerHTML ="6 reps";
+          document.getElementById("42.3.0").innerHTML ="12 reps";
+          document.getElementById("42.3.1").innerHTML ="12 reps";
+          document.getElementById("42.3.2").innerHTML ="10 reps";
+          document.getElementById("42.3.3").innerHTML ="8 reps";
+          document.getElementById("42.4.0").innerHTML ="12 reps";
+          document.getElementById("42.4.1").innerHTML ="12 reps";
+          document.getElementById("42.4.2").innerHTML ="10 reps";
+          document.getElementById("42.4.3").innerHTML ="8 reps";
+          document.getElementById("42.5.0").innerHTML ="8-12 reps";
+          document.getElementById("42.5.1").innerHTML ="8-12 reps";
+          document.getElementById("42.5.2").innerHTML ="8-12 reps";
+          document.getElementById("42.5.3").innerHTML ="8-12 reps";
+          document.getElementById("42.6.0").innerHTML ="8-12 reps";
+          document.getElementById("42.6.1").innerHTML ="8-12 reps";
+          document.getElementById("42.6.2").innerHTML ="8-12 reps";
+          document.getElementById("42.6.3").innerHTML ="8-12 reps";
+
+          <!-- Day 3 -->
+          document.getElementById("43.1.0").innerHTML =Math.round(10*(0.91*squatmax))/10+ "lbs  x 3 reps";
+          document.getElementById("43.1.1").innerHTML =Math.round(10*(0.9545*squatmax))/10+ "lbs  x 1-2 reps";
+          document.getElementById("43.1.2").innerHTML ="";
+          document.getElementById("43.1.3").innerHTML ="";
+          document.getElementById("43.2.0").innerHTML =Math.round(10*(0.91*deadmax))/10+ "lbs  x 3 reps";
+          document.getElementById("43.2.1").innerHTML =Math.round(10*(0.95*squatmax))/10+ "lbs  x 1-2 reps";
+          document.getElementById("43.2.2").innerHTML ="";
+          document.getElementById("43.2.3").innerHTML ="";
+          document.getElementById("43.3.0").innerHTML ="8 reps";
+          document.getElementById("43.3.1").innerHTML ="8 reps";
+          document.getElementById("43.3.2").innerHTML ="8 reps";
+          document.getElementById("43.3.3").innerHTML ="";
+          document.getElementById("43.4.0").innerHTML ="8 reps";
+          document.getElementById("43.4.1").innerHTML ="8 reps";
+          document.getElementById("43.4.2").innerHTML ="8 reps";
+          document.getElementById("43.4.3").innerHTML ="";
+
+          <!-- Day 4 -->
+          document.getElementById("44.1.0").innerHTML =Math.round(10*(0.875*benchmax))/10+ "lbs x 3 reps";
+          document.getElementById("44.1.1").innerHTML =Math.round(10*(0.91*benchmax))/10+ "lbs x 2-4 reps";
+          document.getElementById("44.1.2").innerHTML =Math.round(10*(0.953*benchmax))/10+ "lbs x 1-2 reps";
+          document.getElementById("44.1.3").innerHTML ="";
+          document.getElementById("44.2.0").innerHTML ="10 reps";
+          document.getElementById("44.2.1").innerHTML ="10 reps";
+          document.getElementById("44.2.2").innerHTML ="8 reps";
+          document.getElementById("44.2.3").innerHTML ="6 reps";
+          document.getElementById("44.3.0").innerHTML ="12 reps";
+          document.getElementById("44.3.1").innerHTML ="12 reps";
+          document.getElementById("44.3.2").innerHTML ="10 reps";
+          document.getElementById("44.3.3").innerHTML ="8 reps";
+          document.getElementById("44.4.0").innerHTML ="12 reps";
+          document.getElementById("44.4.1").innerHTML ="12 reps";
+          document.getElementById("44.4.2").innerHTML ="10 reps";
+          document.getElementById("44.4.3").innerHTML ="8 reps";
+          document.getElementById("44.5.0").innerHTML ="8-12 reps";
+          document.getElementById("44.5.1").innerHTML ="8-12 reps";
+          document.getElementById("44.5.2").innerHTML ="8-12 reps";
+          document.getElementById("44.5.3").innerHTML ="";
+          document.getElementById("44.6.0").innerHTML ="8-12 reps";
+          document.getElementById("44.6.1").innerHTML ="8-12 reps";
+          document.getElementById("44.6.2").innerHTML ="8-12 reps";
+          document.getElementById("44.6.3").innerHTML ="";
+
+          <!-- WEEK 5 -->
+          <!-- Day 1 -->
+          document.getElementById("51.1.0").innerHTML =Math.round(10*(0.973*squatmax))/10+ "lbs  x 1-4 reps";
+          document.getElementById("51.1.1").innerHTML ="";
+          document.getElementById("51.1.2").innerHTML ="";
+          document.getElementById("51.1.3").innerHTML ="";
+          document.getElementById("51.2.0").innerHTML =Math.round(10*(0.675*deadmax))/10+ "lbs  x 4 reps";
+          document.getElementById("51.2.1").innerHTML =Math.round(10*(0.7*deadmax))/10+ "lbs  x 4 reps";
+          document.getElementById("51.2.2").innerHTML =Math.round(10*(0.725*deadmax))/10+ "lbs  x 2 reps";
+          document.getElementById("51.2.3").innerHTML ="";
+          document.getElementById("51.3.0").innerHTML ="8 reps";
+          document.getElementById("51.3.1").innerHTML ="8 reps";
+          document.getElementById("51.3.2").innerHTML ="8 reps";
+          document.getElementById("51.3.3").innerHTML ="";
+          document.getElementById("51.4.0").innerHTML ="8 reps";
+          document.getElementById("51.4.1").innerHTML ="8 reps";
+          document.getElementById("51.4.2").innerHTML ="8 reps";
+          document.getElementById("51.4.3").innerHTML ="";
+
+          <!-- Day 2 -->
+          document.getElementById("52.1.0").innerHTML =Math.round(10*(0.96875*benchmax))/10+ "lbs x 1-4 reps";
+          document.getElementById("52.1.1").innerHTML ="";
+          document.getElementById("52.1.2").innerHTML ="";
+          document.getElementById("52.1.3").innerHTML ="";
+          document.getElementById("52.2.0").innerHTML ="8 reps";
+          document.getElementById("52.2.1").innerHTML ="8 reps";
+          document.getElementById("52.2.2").innerHTML ="6 reps";
+          document.getElementById("52.2.3").innerHTML ="";
+          document.getElementById("52.3.0").innerHTML ="8 reps";
+          document.getElementById("52.3.1").innerHTML ="8 reps";
+          document.getElementById("52.3.2").innerHTML ="6 reps";
+          document.getElementById("52.3.3").innerHTML ="";
+          document.getElementById("52.4.0").innerHTML ="8 reps";
+          document.getElementById("52.4.1").innerHTML ="6 reps";
+          document.getElementById("52.4.2").innerHTML ="6 reps";
+          document.getElementById("52.4.3").innerHTML ="";
+          document.getElementById("52.5.0").innerHTML ="8-12 reps";
+          document.getElementById("52.5.1").innerHTML ="8-12 reps";
+          document.getElementById("52.5.2").innerHTML ="8-12 reps";
+          document.getElementById("52.5.3").innerHTML ="";
+          document.getElementById("52.6.0").innerHTML ="8-12 reps";
+          document.getElementById("52.6.1").innerHTML ="8-12 reps";
+          document.getElementById("52.6.2").innerHTML ="8-12 reps";
+          document.getElementById("52.6.3").innerHTML ="";
+
+          <!-- Day 3 -->
+          document.getElementById("53.2.0").innerHTML =Math.round(10*(0.975*deadmax))/10+ "lbs  x 4 reps";
+          document.getElementById("53.2.1").innerHTML ="";
+          document.getElementById("53.2.2").innerHTML ="";
+          document.getElementById("53.2.3").innerHTML ="";
+          document.getElementById("53.3.0").innerHTML ="8 reps";
+          document.getElementById("53.3.1").innerHTML ="8 reps";
+          document.getElementById("53.3.2").innerHTML ="8 reps";
+          document.getElementById("53.3.3").innerHTML ="";
+          document.getElementById("53.4.0").innerHTML ="8 reps";
+          document.getElementById("53.4.1").innerHTML ="8 reps";
+          document.getElementById("53.4.2").innerHTML ="8 reps";
+          document.getElementById("53.4.3").innerHTML ="";
+
+
+
+
+
+
+        }
+
+        </script>
+
+
+
+
+        <h1 class="mt-3"></h1>
+        <h1 class="mt-3"></h1>
+
+        <h1 class="mt-3"></h1>
+        <h1 class="mt-3"></h1>
+        <h1 class="mt-3"></h1>
+
+
+        <ul class="list-unstyled">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
